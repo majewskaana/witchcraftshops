@@ -18,7 +18,7 @@ class garsviela extends Model
         return $this->belongsTo(smarza::class);
         }
 
-        public function razo(){
+        public function kompanija(){
             return $this->belongsTo(kompanija::class);
             }
 }

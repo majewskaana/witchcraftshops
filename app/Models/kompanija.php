@@ -18,5 +18,8 @@ class kompanija extends Model
     public function garsviela(){
         return $this->belongsTo(garsviela::class);
         }
+        public function valsts(){
+            return $this->belongsTo(valsts::class);
+            }
 
 }

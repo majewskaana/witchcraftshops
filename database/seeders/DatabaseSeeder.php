@@ -96,7 +96,7 @@ class DatabaseSeeder extends Seeder
         $lavender->skaits = 5;
         $lavender->cena = 14.99;
         $lavender->smarza()->associate($warm);
-        $lavender->razo()->associate($phoenix);
+        $lavender->kompanija()->associate($phoenix);
         $lavender->save();
         
         $vanilla = new garsviela();
@@ -104,8 +104,8 @@ class DatabaseSeeder extends Seeder
         $vanilla->efekts = 'Can reduce anxiety, promote relaxation, and improve mood';
         $vanilla->skaits = 45;
         $vanilla->cena = 18.99;
-        $lavender->smarza()->associate($warm);
-        $vanilla->razo()->associate($enterprise);
+        $vanilla->smarza()->associate($warm);
+        $vanilla->kompanija()->associate($enterprise);
         $vanilla->save();
 
         $fresh = smarza::where('apraksts', 'Fresh, herbaceous, and slightly earthy with a touch of lemon')->first();
@@ -115,7 +115,7 @@ class DatabaseSeeder extends Seeder
         $fennel->skaits = 5;
         $fennel->cena = 14.99;
         $fennel->smarza()->associate($fresh);
-        $fennel->razo()->associate($veritas);
+        $fennel->kompanija()->associate($veritas);
         $fennel->save();
         
         $sage = new garsviela();
@@ -124,7 +124,7 @@ class DatabaseSeeder extends Seeder
         $sage->skaits = 45;
         $sage->cena = 18.99;
         $sage->smarza()->associate($fresh);
-        $sage->razo()->associate($veritas);
+        $sage->kompanija()->associate($veritas);
         $sage->save();
 
         zodiaks::create(['Nosaukums' => 'Aries']);
