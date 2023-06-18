@@ -8,7 +8,6 @@ use App\Models\akmens;
 use App\Models\garsviela;
 use App\Models\kartis;
 use App\Models\kompanija;
-use App\Models\pirkums;
 use App\Models\smarza;
 use App\Models\valsts;
 use App\Models\zodiaks;
@@ -96,7 +95,7 @@ class DatabaseSeeder extends Seeder
         $lavender->skaits = 5;
         $lavender->cena = 14.99;
         $lavender->smarza()->associate($warm);
-        $lavender->razo()->associate($phoenix);
+        $lavender->kompanija()->associate($phoenix);
         $lavender->save();
         
         $vanilla = new garsviela();
@@ -104,8 +103,8 @@ class DatabaseSeeder extends Seeder
         $vanilla->efekts = 'Can reduce anxiety, promote relaxation, and improve mood';
         $vanilla->skaits = 45;
         $vanilla->cena = 18.99;
-        $lavender->smarza()->associate($warm);
-        $vanilla->razo()->associate($enterprise);
+        $vanilla->smarza()->associate($warm);
+        $vanilla->kompanija()->associate($enterprise);
         $vanilla->save();
 
         $fresh = smarza::where('apraksts', 'Fresh, herbaceous, and slightly earthy with a touch of lemon')->first();
@@ -115,7 +114,7 @@ class DatabaseSeeder extends Seeder
         $fennel->skaits = 5;
         $fennel->cena = 14.99;
         $fennel->smarza()->associate($fresh);
-        $fennel->razo()->associate($veritas);
+        $fennel->kompanija()->associate($veritas);
         $fennel->save();
         
         $sage = new garsviela();
@@ -124,40 +123,40 @@ class DatabaseSeeder extends Seeder
         $sage->skaits = 45;
         $sage->cena = 18.99;
         $sage->smarza()->associate($fresh);
-        $sage->razo()->associate($veritas);
+        $sage->kompanija()->associate($veritas);
         $sage->save();
 
         zodiaks::create(['Nosaukums' => 'Aries']);
-        $aries = smarza::where('Nosaukums', 'Aries')->first();
+        $aries = zodiaks::where('Nosaukums', 'Aries')->first();
         zodiaks::create(['Nosaukums' => 'Taurus']);
-        $taurus = smarza::where('Nosaukums', 'Taurus')->first();
+        $taurus = zodiaks::where('Nosaukums', 'Taurus')->first();
         zodiaks::create(['Nosaukums' => 'Gemini']);
-        $gemini = smarza::where('Nosaukums', 'Gemini')->first();
+        $gemini = zodiaks::where('Nosaukums', 'Gemini')->first();
         zodiaks::create(['Nosaukums' => 'Cancer']);
-        $cancer = smarza::where('Nosaukums', 'Cancer')->first();
+        $cancer = zodiaks::where('Nosaukums', 'Cancer')->first();
         zodiaks::create(['Nosaukums' => 'Leo']);
-        $leo = smarza::where('Nosaukums', 'Leo')->first();
+        $leo = zodiaks::where('Nosaukums', 'Leo')->first();
         zodiaks::create(['Nosaukums' => 'Virgo']);
-        $virgo = smarza::where('Nosaukums', 'Virgo')->first();
+        $virgo = zodiaks::where('Nosaukums', 'Virgo')->first();
         zodiaks::create(['Nosaukums' => 'Libra']);
-        $libra = smarza::where('Nosaukums', 'Libra')->first();
+        $libra = zodiaks::where('Nosaukums', 'Libra')->first();
         zodiaks::create(['Nosaukums' => 'Scorpio']);
-        $scorpio = smarza::where('Nosaukums', 'Scorpio')->first();
+        $scorpio = zodiaks::where('Nosaukums', 'Scorpio')->first();
         zodiaks::create(['Nosaukums' => 'Saggitarius']);
-        $saggitarius = smarza::where('Nosaukums', 'Saggitarius')->first();
+        $saggitarius = zodiaks::where('Nosaukums', 'Saggitarius')->first();
         zodiaks::create(['Nosaukums' => 'Capricorn']);
-        $capricorn = smarza::where('Nosaukums', 'Capricorn')->first();
+        $capricorn = zodiaks::where('Nosaukums', 'Capricorn')->first();
         zodiaks::create(['Nosaukums' => 'Aquarius']);
-        $aquarius = smarza::where('Nosaukums', 'Aquarius')->first();
+        $aquarius = zodiaks::where('Nosaukums', 'Aquarius')->first();
         zodiaks::create(['Nosaukums' => 'Pisces']);
-        $pisces = smarza::where('Nosaukums', 'pisces')->first();
+        $pisces = zodiaks::where('Nosaukums', 'pisces')->first();
         
         $quartz = new akmens();
         $quartz->nosaukums = 'Clear quartz';
         $quartz->efekts = 'Healing';
         $quartz->skaits = 45;
         $quartz->cena = 18.99;
-        $quartz->zodiaks()->associate($aries);
+        $quartz->zodiaks()->create($aries);
         $quartz->razo()->associate($solaris);
         $quartz->save();
 

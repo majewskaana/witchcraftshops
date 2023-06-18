@@ -15,7 +15,7 @@ class akmens extends Model
         'skaits'
     ];
     public function zodiaks(){
-        return $this->hasMany(zodiaks::class);
+        return $this->belongsTo(zodiaks::class);
         }
     public function razo(){
         return $this->belongsTo(kompanija::class);
