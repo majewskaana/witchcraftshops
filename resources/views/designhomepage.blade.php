@@ -2,7 +2,14 @@
 <html>
 <head>
   <title>Online Shop</title>
-  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    /* Additional CSS */
+    footer .shop-map img {
+      width: 400px;
+      height: 200px;
+    }
+  </style>
 </head>
 <body>
   <header>
@@ -36,16 +43,13 @@
   </div>
   <div class="filter-group">
     <h3><button type="button" name="filter" value="cards">Cards</button></h3>
-    <ul>
-      <li><button type="button" name="filter" value="cards">Cards</button></li>
-    </ul>
   </div>
 </section>
 
 
   
   <section class="product-catalogue">
-    <h2>Product Catalogue</h2>
+    <h2>PRODUCT CATALOGUE</h2>
     <div class="product-item">
       <img src="product1.jpg" alt="Product 1">
       <h3>Product 1</h3>
@@ -86,8 +90,14 @@
   
   <footer>
     <div class="shop-map">
-      <h3>SHOP MAP</h3>
-      <img src="map.jpg" alt="Shop Map">
+      <h3>OFFICE MAP</h3>
+      <img src="images/map.png" alt="Click Me" onclick="redirectToLink('https://www.google.com/maps/place/Aleksandra+Čaka+iela+100,+Latgales+priekšpilsēta,+Rīga,+LV-1011/@56.9571881,24.1400531,17z/data=!3m1!4b1!4m6!3m5!1s0x46eece343a2aef39:0x23a3f6aea0fc666a!8m2!3d56.9571881!4d24.1400531!16s%2Fg%2F11mtmlbf4c?entry=ttu')">
+  <script>
+    function redirectToLink(url) {
+      window.location.href = url;
+    }
+
+  </script>
     </div>
     <div class="basic-info">
       <h3> INFO</h3>
