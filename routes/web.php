@@ -16,3 +16,14 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('designhomepage');
 });
+use Illuminate\Support\Facades\App;
+ 
+Route::get('/greeting/{locale}', function (string $locale) {
+    if (! in_array($locale, ['en', 'lv'])) {
+        abort(400);
+    }
+ 
+    App::setLocale($locale);
+ 
+    // ...
+});

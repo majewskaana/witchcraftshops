@@ -1,253 +1,250 @@
-    /* Additional CSS */
-    body {
-      font-family: Arial, sans-serif;
-      margin: 0;
-      padding: 0;
-    }
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
 
-    /* Header Styles */
-    header {
-      background-color: #5f5d5d;
-      padding: 20px;
-      text-align: center;
-    }
+/* Header Styles */
+header {
+  background-color: #5f5d5d;
+  padding: 20px;
+  text-align: center;
+}
 
-    h1 {
-      color: #fff;
-      margin: 0;
-      font-size: 28px;
-      text-transform: uppercase;
-    }
+h1 {
+  color: #101010;
+  margin: 0;
+}
+h2 {
+  color: #0a0a0a;
+  margin: 0;
+  text-align: center;
+}
 
-    .language a {
-      color: #fff;
-      margin-left: 10px;
-      text-decoration: none;
-      font-size: 14px;
-    }
+.language {
+  text-align: right;
+  margin-top: 10px;
+}
 
-    .user-buttons {
-      margin-top: 10px;
-    }
+.language a {
+  margin-left: 10px;
+}
 
-    .signup-button,
-    .login-button {
-      display: inline-block;
-      padding: 5px 10px;
-      background-color: #333;
-      color: #fff;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: background-color 0.3s ease-in-out;
-      margin-left: 10px;
-      font-size: 14px;
-    }
+.user-buttons {
+  text-align: right;
+  margin-top: 10px;
+}
 
-    .signup-button:hover,
-    .login-button:hover {
-      background-color: #555;
-    }
 
-    /* Filter Styles */
-    .filter {
-      display: inline-block;
-      vertical-align: top;
-      margin-right: 20px;
-      text-transform: uppercase;
-    }
 
-    .filter h2 {
-      color: #0a0a0a;
-      margin: 0;
-      text-align: center;
-      font-size: 24px;
-      text-transform: uppercase;
-    }
+.signup-button,
+.login-button,
+.donate-button {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+  margin-left: 10px;
+}
 
-    .filter-group {
-      margin-bottom: 10px;
-      text-transform: uppercase;
-    }
+.signup-button:hover,
+.login-button:hover,
+.donate-button:hover {
+  background-color: #555;
+}
 
-    .filter-group h3 {
-      margin: 0;
-      text-transform: uppercase;
-      font-size: 18px;
-    }
 
-    .filter-group ul {
-      list-style-type: none;
-      margin: 0;
-      padding: 0;
-      text-transform: uppercase;
-    }
+/* Filter Styles */
+.filter {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 20px;
+  text-transform: uppercase;
+}
 
-    .filter-group li {
-      margin: 5px 0;
-      text-transform: uppercase;
-    }
+.filter-group {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+}
 
-    .filter-group button {
-      background: none;
-      border: none;
-      cursor: pointer;
-      color: #333;
-      font-weight: bold;
-      text-transform: uppercase;
-      font-size: 14px;
-    }
+.filter-group h3 {
+  margin: 0;
+  text-transform: uppercase;
+}
 
-    /* Product Catalogue Styles */
-    .product-catalogue {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-    }
+.filter-group ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+}
 
-    .product-item {
-      flex: 0 0 200px;
-      text-align: center;
-      margin: 20px;
-      border: 1px solid #ccc;
-      padding: 10px;
-      border-radius: 5px;
-      background-color: #f2f2f2;
-      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-      transition: box-shadow 0.3s ease-in-out;
-    }
+.filter-group li {
+  margin: 5px 0;
+  text-transform: uppercase;
+}
 
-    .product-item:hover {
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    }
-  
-  .product-item img {
-    width: 200px;
-    height: 200px;
-    margin-bottom: 10px;
-  }
-  
-  .product-item h3 {
-    margin: 0;
-    font-size: 18px;
-  }
-  
-  .product-item p {
-    margin-top: 5px;
-    font-size: 14px;
-  }
-  
-  .product-item .price {
-    display: block;
-    font-size: 16px;
-    font-weight: bold;
-    margin-top: 10px;
-  }
-  
-  .product-item .buy-button {
-    display: inline-block;
-    padding: 5px 10px;
-    background-color: #333;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease-in-out;
-  }
-  
-  .product-item .buy-button:hover {
-    background-color: #555;
-  }
-  
+.filter-group button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: #333;
+  font-weight: bold;
+  text-transform: uppercase;
+}
 
- /* Footer styles */
- footer {
-    background-color: #736d6d;
-    color: #fff;
-    padding-top: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 10px;
-  }
-  
-  .container {
-    margin-top: 20px;
-  }
-  
-  .row {
-    display: flex;
-    justify-content: space-between;
-  }
-  
-  .col-md-4 {
-    flex-basis: 30%;
-  }
-  
-  .section {
-    margin-bottom: 20px;
-  }
-  
-  .shop-map h3,
-  .basic-info h3 {
-    margin-top: 0;
-    color: #f2f2f2;
-  }
-  
-  .basic-info p {
-    margin: 5px 0;
-  }
-  
-  .donate-button {
-    display: inline-block;
-    padding: 5px 10px;
-    background-color: #333;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease-in-out;
-    margin-left: 10px; /* Adjust the value as needed */
-  }
-  
-  .donate-button:hover {
-    background-color: #555;
-  }
-  
+/* Product Catalogue Styles */
+.product-catalogue {
+  display: inline-block;
+  vertical-align: top;
+  text-align: center;
+}
 
+.product-item {
+  display: inline-block;
+  text-align: center;
+  margin: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease-in-out;
   
-  .card-image img {
-    margin-top: 20px;
-    text-align: right;
-    width: 200px;
-    height: 300px;
-  }
-  
-  #office-map-section img {
-    width: 500px;
-    height: 300px;
-    margin-top: 10px;
+}
 
-  }
-  
-  #donate-section img {
-    width: 80px;
-    height: 60px;
-    margin-top: 10px;
+.product-item:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
 
-  }
-  
-  .card-image {
-    text-align: center;
-  }
-  
-  .card-image p {
-    margin: 10px 0;
-    font-size: 18px;
-  }
-  
-  .card-image img {
-    width: 80%;
-    height: auto;
-    border-radius: 5px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  }
-  
+.product-item img {
+  width: 200px;
+  height: 200px;
+  margin-bottom: 10px;
+}
+
+.product-item h3 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.product-item p {
+  margin-top: 5px;
+  font-size: 14px;
+}
+
+.product-item .price {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.product-item .buy-button {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.product-item .buy-button:hover {
+  background-color: #555;
+}
+
+
+/* Footer styles */
+footer {
+  background-color: #736d6d;
+  color: #fff;
+  padding-top: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+}
+
+.container {
+  margin-top: 20px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+}
+
+.col-md-4 {
+  flex-basis: 30%;
+}
+
+.section {
+  margin-bottom: 20px;
+}
+
+.shop-map h3,
+.basic-info h3 {
+  margin-top: 0;
+  color: #f2f2f2;
+}
+
+.basic-info p {
+  margin: 5px 0;
+}
+
+.donate-button {
+  display: inline-block;
+  padding: 5px 10px;
+  background-color: #333;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background-color 0.3s ease-in-out;
+  margin-left: 10px; /* Adjust the value as needed */
+}
+
+.donate-button:hover {
+  background-color: #555;
+}
+
+
+
+.card-image img {
+  margin-top: 20px;
+  text-align: right;
+  width: 200px;
+  height: 300px;
+}
+
+#office-map-section img {
+  width: 500px;
+  height: 300px;
+  margin-top: 10px;
+
+}
+
+#donate-section img {
+  width: 80px;
+  height: 60px;
+  margin-top: 10px;
+
+}
+
+.card-image {
+  text-align: center;
+}
+
+.card-image p {
+  margin: 10px 0;
+  font-size: 18px;
+}
+
+.card-image img {
+  width: 80%;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
