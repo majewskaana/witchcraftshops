@@ -2,19 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\akmens;
 use Illuminate\Http\Request;
 
-class StoneController extends Controller
+class SpicesController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
-{
-    $stones = akmens::all();
-    return view('stonecatalogue', compact('stones'));
-}
+    {
+        //
+    }
 
     /**
      * Show the form for creating a new resource.

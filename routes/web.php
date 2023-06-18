@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\StoneController;
 
 /*
 |--------------------------------------------------------------------------
@@ -21,6 +22,9 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function (){
     return view('greetingandcategorychoosing');
 });
+
+Route::resource('stone', StoneController::class);
+
 
 Route::get('/stone', function (){
     return view('stonecatalogue');
