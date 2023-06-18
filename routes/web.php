@@ -21,3 +21,15 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function (){
     return view('greetingandcategorychoosing');
 });
+
+Route::get('/stone', function (){
+    return view('stonecatalogue');
+});
+
+Route::get('/cards', function (){
+    return view('cardscatalogue');
+});
+
+Route::get('/spices', function (){
+    return view('spicescatalogue');
+});
