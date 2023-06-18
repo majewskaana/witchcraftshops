@@ -96,6 +96,7 @@ class DatabaseSeeder extends Seeder
         $lavender->skaits = 5;
         $lavender->cena = 14.99;
         $lavender->smarza()->associate($warm);
+        $lavender->razo()->associate($phoenix);
         $lavender->save();
         
         $vanilla = new garsviela();
@@ -103,7 +104,8 @@ class DatabaseSeeder extends Seeder
         $vanilla->efekts = 'Can reduce anxiety, promote relaxation, and improve mood';
         $vanilla->skaits = 45;
         $vanilla->cena = 18.99;
-        $vanilla->smarza()->associate($warm);
+        $lavender->smarza()->associate($warm);
+        $vanilla->razo()->associate($enterprise);
         $vanilla->save();
 
         $fresh = smarza::where('apraksts', 'Fresh, herbaceous, and slightly earthy with a touch of lemon')->first();
@@ -113,6 +115,7 @@ class DatabaseSeeder extends Seeder
         $fennel->skaits = 5;
         $fennel->cena = 14.99;
         $fennel->smarza()->associate($fresh);
+        $fennel->razo()->associate($veritas);
         $fennel->save();
         
         $sage = new garsviela();
@@ -121,9 +124,189 @@ class DatabaseSeeder extends Seeder
         $sage->skaits = 45;
         $sage->cena = 18.99;
         $sage->smarza()->associate($fresh);
+        $sage->razo()->associate($veritas);
         $sage->save();
 
+        zodiaks::create(['Nosaukums' => 'Aries']);
+        $aries = smarza::where('Nosaukums', 'Aries')->first();
+        zodiaks::create(['Nosaukums' => 'Taurus']);
+        $taurus = smarza::where('Nosaukums', 'Taurus')->first();
+        zodiaks::create(['Nosaukums' => 'Gemini']);
+        $gemini = smarza::where('Nosaukums', 'Gemini')->first();
+        zodiaks::create(['Nosaukums' => 'Cancer']);
+        $cancer = smarza::where('Nosaukums', 'Cancer')->first();
+        zodiaks::create(['Nosaukums' => 'Leo']);
+        $leo = smarza::where('Nosaukums', 'Leo')->first();
+        zodiaks::create(['Nosaukums' => 'Virgo']);
+        $virgo = smarza::where('Nosaukums', 'Virgo')->first();
+        zodiaks::create(['Nosaukums' => 'Libra']);
+        $libra = smarza::where('Nosaukums', 'Libra')->first();
+        zodiaks::create(['Nosaukums' => 'Scorpio']);
+        $scorpio = smarza::where('Nosaukums', 'Scorpio')->first();
+        zodiaks::create(['Nosaukums' => 'Saggitarius']);
+        $saggitarius = smarza::where('Nosaukums', 'Saggitarius')->first();
+        zodiaks::create(['Nosaukums' => 'Capricorn']);
+        $capricorn = smarza::where('Nosaukums', 'Capricorn')->first();
+        zodiaks::create(['Nosaukums' => 'Aquarius']);
+        $aquarius = smarza::where('Nosaukums', 'Aquarius')->first();
+        zodiaks::create(['Nosaukums' => 'Pisces']);
+        $pisces = smarza::where('Nosaukums', 'pisces')->first();
         
+        $quartz = new akmens();
+        $quartz->nosaukums = 'Clear quartz';
+        $quartz->efekts = 'Healing';
+        $quartz->skaits = 45;
+        $quartz->cena = 18.99;
+        $quartz->zodiaks()->associate($aries);
+        $quartz->razo()->associate($solaris);
+        $quartz->save();
+
+        $fluorite = new akmens();
+        $fluorite->nosaukums = 'Rainbow Fluorite';
+        $fluorite->efekts = 'Focus';
+        $fluorite->skaits = 45;
+        $fluorite->cena = 18.99;
+        $fluorite->zodiaks()->associate($taurus);
+        $fluorite->razo()->associate($solaris);
+        $fluorite->save();
+
+        $labradorite = new akmens();
+        $labradorite->nosaukums = 'Labradorite';
+        $labradorite->efekts = 'Intellect';
+        $labradorite->skaits = 45;
+        $labradorite->cena = 18.99;
+        $labradorite->zodiaks()->associate($gemini);
+        $labradorite->razo()->associate($zenith);
+        $labradorite->save();
+
+        $malachite = new akmens();
+        $malachite->nosaukums = 'Malachite';
+        $malachite->efekts = 'Attracting Prosperity';
+        $malachite->skaits = 45;
+        $malachite->cena = 18.99;
+        $malachite->zodiaks()->associate($cancer);
+        $malachite->razo()->associate($zenith);
+        $malachite->save();
+
+        $lapis = new akmens();
+        $lapis->nosaukums = 'Lapis Lazuli';
+        $lapis->efekts = 'Grounding and Protection';
+        $lapis->skaits = 45;
+        $lapis->cena = 18.99;
+        $lapis->zodiaks()->associate($leo);
+        $lapis->razo()->associate($veritas);
+        $lapis->save();
+
+        $charoite = new akmens();
+        $charoite->nosaukums = 'Charoite';
+        $charoite->efekts = 'Revealing Truth';
+        $charoite->skaits = 45;
+        $charoite->cena = 18.99;
+        $charoite->zodiaks()->associate($virgo);
+        $charoite->razo()->associate($veritas);
+        $charoite->save();
+
+        $lepidolite = new akmens();
+        $lepidolite->nosaukums = 'Lepidolite';
+        $lepidolite->efekts = 'Decision-Making';
+        $lepidolite->skaits = 45;
+        $lepidolite->cena = 18.99;
+        $lepidolite->zodiaks()->associate($libra);
+        $lepidolite->razo()->associate($enterprise);
+        $lepidolite->save();
+
+        $red_tiger = new akmens();
+        $red_tiger->nosaukums = 'Red Tiger Eye';
+        $red_tiger->efekts = 'Manifestation';
+        $red_tiger->skaits = 45;
+        $red_tiger->cena = 18.99;
+        $red_tiger->zodiaks()->associate($scorpio);
+        $red_tiger->razo()->associate($enterprise);
+        $red_tiger->save();
+
+        $jasper = new akmens();
+        $jasper->nosaukums = 'Red Jasper';
+        $jasper->efekts = 'Change';
+        $jasper->skaits = 45;
+        $jasper->cena = 18.99;
+        $jasper->zodiaks()->associate($saggitarius);
+        $jasper->razo()->associate($terranova);
+        $jasper->save();
+
+        $celestite = new akmens();
+        $celestite->nosaukums = 'Celestite';
+        $celestite->efekts = 'Grounding';
+        $celestite->skaits = 45;
+        $celestite->cena = 18.99;
+        $celestite->zodiaks()->associate($capricorn);
+        $celestite->razo()->associate($terranova);
+        $celestite->save();
+
+        $kyanite = new akmens();
+        $kyanite->nosaukums = 'Blue Kyanite';
+        $kyanite->efekts = 'Communication';
+        $kyanite->skaits = 45;
+        $kyanite->cena = 18.99;
+        $kyanite->zodiaks()->associate($aquarius);
+        $kyanite->razo()->associate($phoenix);
+        $kyanite->save();
+
+        $tiger = new akmens();
+        $tiger->nosaukums = 'Tiger Eye';
+        $tiger->efekts = 'Confidence';
+        $tiger->skaits = 45;
+        $tiger->cena = 18.99;
+        $tiger->zodiaks()->associate($pisces);
+        $tiger->razo()->associate($phoenix);
+        $tiger->save();
+
+        $tiger = new kartis();
+        $tiger->nosaukums = 'The Fool';
+        $tiger->efekts = 'Minor Arcana';
+        $tiger->skaits = 45;
+        $tiger->cena = 18.99;
+        $tiger->razo()->associate($phoenix);
+        $tiger->save();
+
+        $tiger = new kartis();
+        $tiger->nosaukums = 'Four of Swords';
+        $tiger->efekts = 'Major Arcana';
+        $tiger->skaits = 45;
+        $tiger->cena = 18.99;
+        $tiger->razo()->associate($veritas);
+        $tiger->save();
+
+        $tiger = new kartis();
+        $tiger->nosaukums = 'The Tower band';
+        $tiger->efekts = 'Minor Arcana';
+        $tiger->skaits = 45;
+        $tiger->cena = 18.99;
+        $tiger->razo()->associate($enterprise);
+        $tiger->save();
+
+        $tiger = new kartis();
+        $tiger->nosaukums = 'The Chariot, Quantity';
+        $tiger->efekts = 'Major Arcana';
+        $tiger->skaits = 45;
+        $tiger->cena = 18.99;
+        $tiger->razo()->associate($apex);
+        $tiger->save();
+
+        $tiger = new kartis();
+        $tiger->nosaukums = 'Six of Wands';
+        $tiger->efekts = 'Major Arcana';
+        $tiger->skaits = 45;
+        $tiger->cena = 18.99;
+        $tiger->razo()->associate($solaris);
+        $tiger->save();
+
+        $tiger = new kartis();
+        $tiger->nosaukums = 'The Empress';
+        $tiger->efekts = 'Minor Arcana';
+        $tiger->skaits = 45;
+        $tiger->cena = 18.99;
+        $tiger->razo()->associate($atlas);
+        $tiger->save();
 
     }
 }
