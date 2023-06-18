@@ -165,7 +165,7 @@ return [
          */
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
-        // App\Providers\BroadcastServiceProvider::class,
+        App\Providers\BroadcastServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
     ])->toArray(),
@@ -186,3 +186,15 @@ return [
     ])->toArray(),
 
 ];
+// config/app.php
+
+'providers' => [
+    // Other providers...
+    Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider::class,
+],
+
+'middleware' => [
+    // Other middleware...
+    'Mcamara\LaravelLocalization\Middleware\LaravelLocalizationMiddleware',
+],
+
