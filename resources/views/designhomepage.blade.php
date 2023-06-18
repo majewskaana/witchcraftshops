@@ -19,10 +19,22 @@
     </div>
     <div class="user-buttons">
     <div>
-      <a href="#" class="signup-button">Sign Up</a>
+      <button onclick="redirectToRegistration()">Sign Up</button>
+
+<script>
+  function redirectToRegistration() {
+    window.location.href = "register.blade.php";
+  }
+</script>
     </div>
     <div>
-      <a href="#" class="login-button">Log In</a>
+      <button onclick="redirectToRegistration()">Log in</button>
+
+<script>
+  function redirectToRegistration() {
+    window.location.href = "login.blade.php";
+  }
+</script>
     </div>
 </div>
   </header>
