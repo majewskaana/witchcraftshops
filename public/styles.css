@@ -153,41 +153,76 @@ body {
   footer {
     background-color: #333;
     color: #fff;
-    padding-left: 5px;;
-    
+    padding: 20px 0;
   }
   
-  .shop-map {
-    display: inline-block;
-    vertical-align: top;
-    margin-right: 50px;
-    margin-left: 50px;
-    text-align: left;
-    text-align: center;
-    
-
+  .container {
+    margin-top: 20px;
   }
   
-  .shop-map h3 {
-    margin: 0;
-    color: #f2f2f2;
+  .row {
+    display: flex;
+    justify-content: space-between;
   }
   
-  .basic-info {
-    display: inline-block;
-    vertical-align: top;
-    padding-right: 50px;
-    margin-left: 700px;
-    text-align: center;
-
+  .col-md-4 {
+    flex-basis: 30%;
   }
   
+  .section {
+    margin-bottom: 20px;
+  }
+  
+  .shop-map h3,
   .basic-info h3 {
-    margin: 0;
+    margin-top: 0;
     color: #f2f2f2;
   }
   
   .basic-info p {
-    color: #f2f2f2;
     margin: 5px 0;
   }
+  
+  .donate-button {
+    display: inline-block;
+    padding: 5px 10px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
+  }
+  
+  .donate-button:hover {
+    background-color: #555;
+  }
+  
+  .basic-info img {
+    width: 500px;
+    height: 300px;
+    margin-top: 10px;
+  }
+  
+  .donate-container img {
+    width: 80px;
+    height: 60 px;
+    margin-top: 10px;
+  }
+  
+  .col-md-4 img {
+    width: 20px;
+    height: 20px;
+    margin-top: 10px;
+  }
+
+  
+  .card-image img {
+    margin-top: 20px;
+    text-align: right;
+    width: 200px;
+    height: 300px;
+  }
+  
+
+  
+  
