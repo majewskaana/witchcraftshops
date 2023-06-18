@@ -15,6 +15,11 @@ body {
     color: #333;
     margin: 0;
   }
+  h2 {
+    color: #333;
+    margin: 0;
+    text-align: center;
+  }
   
   .language {
     text-align: right;

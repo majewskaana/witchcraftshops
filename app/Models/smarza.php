@@ -8,4 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 class smarza extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['apraksts'];
+    public function garsviela(){
+        return $this->hasMany(garsviela::class);
+        }
 }

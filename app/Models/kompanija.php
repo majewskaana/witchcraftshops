@@ -12,7 +12,7 @@ class kompanija extends Model
     public function valsts(){
         return $this->belongsTo(valsts::class);
         }
-    public function pardeva(){
+    public function razo(){
             return $this->hasMany(pirkums::class);
             }
 }
