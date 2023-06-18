@@ -188,13 +188,3 @@ return [
 ];
 // config/app.php
 
-'providers' => [
-    // Other providers...
-    Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider::class,
-],
-
-'middleware' => [
-    // Other middleware...
-    'Mcamara\LaravelLocalization\Middleware\LaravelLocalizationMiddleware',
-],
-
