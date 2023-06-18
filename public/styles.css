@@ -6,7 +6,7 @@ body {
 
 /* Header Styles */
 header {
-  background-color: #5f5d5d;
+  background-color: #e0dede;
   padding: 20px;
   text-align: center;
 }
@@ -42,7 +42,7 @@ h2 {
 .donate-button {
   display: inline-block;
   padding: 5px 10px;
-  background-color: #333;
+  background-color: #908e8e;
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
@@ -53,7 +53,7 @@ h2 {
 .signup-button:hover,
 .login-button:hover,
 .donate-button:hover {
-  background-color: #555;
+  background-color: #908e8e;
 }
 
 
@@ -91,7 +91,7 @@ h2 {
   background: none;
   border: none;
   cursor: pointer;
-  color: #333;
+  color: #908e8e;
   font-weight: bold;
   text-transform: uppercase;
 }
@@ -146,7 +146,7 @@ h2 {
 .product-item .buy-button {
   display: inline-block;
   padding: 5px 10px;
-  background-color: #333;
+  background-color: #908e8e;
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
@@ -154,14 +154,14 @@ h2 {
 }
 
 .product-item .buy-button:hover {
-  background-color: #555;
+  background-color: #908e8e;
 }
 
 
 /* Footer styles */
 footer {
-  background-color: #736d6d;
-  color: #fff;
+  background-color: #e0dede;
+  color: #0f0f0f;
   padding-top: 10px;
   padding-left: 20px;
   padding-right: 20px;
@@ -188,7 +188,7 @@ footer {
 .shop-map h3,
 .basic-info h3 {
   margin-top: 0;
-  color: #f2f2f2;
+  color: #000000;
 }
 
 .basic-info p {
@@ -198,7 +198,7 @@ footer {
 .donate-button {
   display: inline-block;
   padding: 5px 10px;
-  background-color: #333;
+  background-color: #908e8e;
   color: #fff;
   text-decoration: none;
   border-radius: 5px;
