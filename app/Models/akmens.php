@@ -17,7 +17,7 @@ class akmens extends Model
     public function zodiaks(){
         return $this->belongsTo(zodiaks::class);
         }
-    public function razo(){
+    public function kompanija(){
         return $this->belongsTo(kompanija::class);
         }
 }

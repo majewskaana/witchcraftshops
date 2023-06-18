@@ -127,9 +127,9 @@ class DatabaseSeeder extends Seeder
         $sage->save();
 
         zodiaks::create(['Nosaukums' => 'Aries']);
-        $aries = zodiaks::where('Nosaukums', 'Aries')->first();
+       
         zodiaks::create(['Nosaukums' => 'Taurus']);
-        $taurus = zodiaks::where('Nosaukums', 'Taurus')->first();
+       
         zodiaks::create(['Nosaukums' => 'Gemini']);
         $gemini = zodiaks::where('Nosaukums', 'Gemini')->first();
         zodiaks::create(['Nosaukums' => 'Cancer']);
@@ -150,23 +150,25 @@ class DatabaseSeeder extends Seeder
         $aquarius = zodiaks::where('Nosaukums', 'Aquarius')->first();
         zodiaks::create(['Nosaukums' => 'Pisces']);
         $pisces = zodiaks::where('Nosaukums', 'pisces')->first();
-        
+
+        $aries = zodiaks::where('Nosaukums', 'Aries')->first(); 
         $quartz = new akmens();
         $quartz->nosaukums = 'Clear quartz';
         $quartz->efekts = 'Healing';
         $quartz->skaits = 45;
         $quartz->cena = 18.99;
-        $quartz->zodiaks()->create($aries);
-        $quartz->razo()->associate($solaris);
+        $quartz->zodiaks()->associate($aries);
+        $quartz->kompanija()->associate($solaris);
         $quartz->save();
 
+        $taurus = zodiaks::where('Nosaukums', 'Taurus')->first();
         $fluorite = new akmens();
         $fluorite->nosaukums = 'Rainbow Fluorite';
         $fluorite->efekts = 'Focus';
         $fluorite->skaits = 45;
         $fluorite->cena = 18.99;
         $fluorite->zodiaks()->associate($taurus);
-        $fluorite->razo()->associate($solaris);
+        $fluorite->kompanija()->associate($solaris);
         $fluorite->save();
 
         $labradorite = new akmens();
@@ -175,7 +177,7 @@ class DatabaseSeeder extends Seeder
         $labradorite->skaits = 45;
         $labradorite->cena = 18.99;
         $labradorite->zodiaks()->associate($gemini);
-        $labradorite->razo()->associate($zenith);
+        $labradorite->kompanija()->associate($zenith);
         $labradorite->save();
 
         $malachite = new akmens();
@@ -184,7 +186,7 @@ class DatabaseSeeder extends Seeder
         $malachite->skaits = 45;
         $malachite->cena = 18.99;
         $malachite->zodiaks()->associate($cancer);
-        $malachite->razo()->associate($zenith);
+        $malachite->kompanija()->associate($zenith);
         $malachite->save();
 
         $lapis = new akmens();
@@ -193,7 +195,7 @@ class DatabaseSeeder extends Seeder
         $lapis->skaits = 45;
         $lapis->cena = 18.99;
         $lapis->zodiaks()->associate($leo);
-        $lapis->razo()->associate($veritas);
+        $lapis->kompanija()->associate($veritas);
         $lapis->save();
 
         $charoite = new akmens();
@@ -202,7 +204,7 @@ class DatabaseSeeder extends Seeder
         $charoite->skaits = 45;
         $charoite->cena = 18.99;
         $charoite->zodiaks()->associate($virgo);
-        $charoite->razo()->associate($veritas);
+        $charoite->kompanija()->associate($veritas);
         $charoite->save();
 
         $lepidolite = new akmens();
@@ -211,7 +213,7 @@ class DatabaseSeeder extends Seeder
         $lepidolite->skaits = 45;
         $lepidolite->cena = 18.99;
         $lepidolite->zodiaks()->associate($libra);
-        $lepidolite->razo()->associate($enterprise);
+        $lepidolite->kompanija()->associate($enterprise);
         $lepidolite->save();
 
         $red_tiger = new akmens();
@@ -220,7 +222,7 @@ class DatabaseSeeder extends Seeder
         $red_tiger->skaits = 45;
         $red_tiger->cena = 18.99;
         $red_tiger->zodiaks()->associate($scorpio);
-        $red_tiger->razo()->associate($enterprise);
+        $red_tiger->kompanija()->associate($enterprise);
         $red_tiger->save();
 
         $jasper = new akmens();
@@ -229,7 +231,7 @@ class DatabaseSeeder extends Seeder
         $jasper->skaits = 45;
         $jasper->cena = 18.99;
         $jasper->zodiaks()->associate($saggitarius);
-        $jasper->razo()->associate($terranova);
+        $jasper->kompanija()->associate($terranova);
         $jasper->save();
 
         $celestite = new akmens();
@@ -238,7 +240,7 @@ class DatabaseSeeder extends Seeder
         $celestite->skaits = 45;
         $celestite->cena = 18.99;
         $celestite->zodiaks()->associate($capricorn);
-        $celestite->razo()->associate($terranova);
+        $celestite->kompanija()->associate($terranova);
         $celestite->save();
 
         $kyanite = new akmens();
@@ -247,7 +249,7 @@ class DatabaseSeeder extends Seeder
         $kyanite->skaits = 45;
         $kyanite->cena = 18.99;
         $kyanite->zodiaks()->associate($aquarius);
-        $kyanite->razo()->associate($phoenix);
+        $kyanite->kompanija()->associate($phoenix);
         $kyanite->save();
 
         $tiger = new akmens();
@@ -256,56 +258,56 @@ class DatabaseSeeder extends Seeder
         $tiger->skaits = 45;
         $tiger->cena = 18.99;
         $tiger->zodiaks()->associate($pisces);
-        $tiger->razo()->associate($phoenix);
+        $tiger->kompanija()->associate($phoenix);
         $tiger->save();
 
-        $tiger = new kartis();
-        $tiger->nosaukums = 'The Fool';
-        $tiger->efekts = 'Minor Arcana';
-        $tiger->skaits = 45;
-        $tiger->cena = 18.99;
-        $tiger->razo()->associate($phoenix);
-        $tiger->save();
+        $fool = new kartis();
+        $fool->nosaukums = 'The Fool';
+        $fool->efekts = 'Minor Arcana';
+        $fool->skaits = 45;
+        $fool->cena = 18.99;
+        $fool->kompanija()->associate($phoenix);
+        $fool->save();
 
-        $tiger = new kartis();
-        $tiger->nosaukums = 'Four of Swords';
-        $tiger->efekts = 'Major Arcana';
-        $tiger->skaits = 45;
-        $tiger->cena = 18.99;
-        $tiger->razo()->associate($veritas);
-        $tiger->save();
+        $swords = new kartis();
+        $swords->nosaukums = 'Four of Swords';
+        $swords->efekts = 'Major Arcana';
+        $swords->skaits = 45;
+        $swords->cena = 18.99;
+        $swords->kompanija()->associate($veritas);
+        $swords->save();
 
-        $tiger = new kartis();
-        $tiger->nosaukums = 'The Tower band';
-        $tiger->efekts = 'Minor Arcana';
-        $tiger->skaits = 45;
-        $tiger->cena = 18.99;
-        $tiger->razo()->associate($enterprise);
-        $tiger->save();
+        $tower = new kartis();
+        $tower->nosaukums = 'The Tower band';
+        $tower->efekts = 'Minor Arcana';
+        $tower->skaits = 45;
+        $tower->cena = 18.99;
+        $tower->kompanija()->associate($enterprise);
+        $tower->save();
 
-        $tiger = new kartis();
-        $tiger->nosaukums = 'The Chariot, Quantity';
-        $tiger->efekts = 'Major Arcana';
-        $tiger->skaits = 45;
-        $tiger->cena = 18.99;
-        $tiger->razo()->associate($apex);
-        $tiger->save();
+        $chariot = new kartis();
+        $chariot->nosaukums = 'The Chariot, Quantity';
+        $chariot->efekts = 'Major Arcana';
+        $chariot->skaits = 45;
+        $chariot->cena = 18.99;
+        $chariot->kompanija()->associate($apex);
+        $chariot->save();
 
-        $tiger = new kartis();
-        $tiger->nosaukums = 'Six of Wands';
-        $tiger->efekts = 'Major Arcana';
-        $tiger->skaits = 45;
-        $tiger->cena = 18.99;
-        $tiger->razo()->associate($solaris);
-        $tiger->save();
+        $wands = new kartis();
+        $wands->nosaukums = 'Six of Wands';
+        $wands->efekts = 'Major Arcana';
+        $wands->skaits = 45;
+        $wands->cena = 18.99;
+        $wands->kompanija()->associate($solaris);
+        $wands->save();
 
-        $tiger = new kartis();
-        $tiger->nosaukums = 'The Empress';
-        $tiger->efekts = 'Minor Arcana';
-        $tiger->skaits = 45;
-        $tiger->cena = 18.99;
-        $tiger->razo()->associate($atlas);
-        $tiger->save();
+        $empress = new kartis();
+        $empress->nosaukums = 'The Empress';
+        $empress->efekts = 'Minor Arcana';
+        $empress->skaits = 45;
+        $empress->cena = 18.99;
+        $empress->kompanija()->associate($atlas);
+        $empress->save();
 
     }
 }

@@ -14,7 +14,7 @@ class kartis extends Model
         'cena',
         'skaits'
     ];
-    public function razo(){
+    public function kompanija(){
         return $this->belongsTo(kompanija::class);
         }
 }
