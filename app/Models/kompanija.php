@@ -9,10 +9,14 @@ class kompanija extends Model
 {
     use HasFactory;
     protected $fillable = ['nosaukums'];
-    public function valsts(){
-        return $this->belongsTo(valsts::class);
+    public function akmens(){
+        return $this->belongsTo(akmens::class);
         }
-    public function razo(){
-            return $this->hasMany(pirkums::class);
-            }
+    public function kartis(){
+        return $this->belongsTo(kartis::class);
+        }
+    public function garsviela(){
+        return $this->belongsTo(garsviela::class);
+        }
+
 }
