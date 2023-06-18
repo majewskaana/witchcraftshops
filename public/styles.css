@@ -1,124 +1,126 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-  }
-  
-  /* Header Styles */
-  header {
-    background-color: #5f5d5d;
-    padding: 20px;
-    text-align: center;
-  }
-  
-  h1 {
-    color: #101010;
-    margin: 0;
-  }
-  h2 {
-    color: #0a0a0a;
-    margin: 0;
-    text-align: center;
-  }
-  
-  .language {
-    text-align: right;
-    margin-top: 10px;
-  }
-  
-  .language a {
-    margin-left: 10px;
-  }
-  
-  .user-buttons {
-    text-align: right;
-    margin-top: 10px;
-  }
-  
+    /* Additional CSS */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
 
-  
-  .signup-button,
-  .login-button,
-  .donate-button {
-    display: inline-block;
-    padding: 5px 10px;
-    background-color: #333;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s ease-in-out;
-    margin-left: 10px;
-  }
-  
-  .signup-button:hover,
-  .login-button:hover,
-  .donate-button:hover {
-    background-color: #555;
-  }
-  
-  
-  /* Filter Styles */
-  .filter {
-    display: inline-block;
-    vertical-align: top;
-    margin-right: 20px;
-    text-transform: uppercase;
-  }
-  
-  .filter-group {
-    margin-bottom: 10px;
-    text-transform: uppercase;
-  }
-  
-  .filter-group h3 {
-    margin: 0;
-    text-transform: uppercase;
-  }
-  
-  .filter-group ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    text-transform: uppercase;
-  }
-  
-  .filter-group li {
-    margin: 5px 0;
-    text-transform: uppercase;
-  }
-  
-  .filter-group button {
-    background: none;
-    border: none;
-    cursor: pointer;
-    color: #333;
-    font-weight: bold;
-    text-transform: uppercase;
-  }
-  
-  /* Product Catalogue Styles */
-  .product-catalogue {
-    display: inline-block;
-    vertical-align: top;
-    text-align: center;
-  }
-  
-  .product-item {
-    display: inline-block;
-    text-align: center;
-    margin: 20px;
-    border: 1px solid #ccc;
-    padding: 10px;
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    transition: box-shadow 0.3s ease-in-out;
-    
-  }
-  
-  .product-item:hover {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  }
+    /* Header Styles */
+    header {
+      background-color: #5f5d5d;
+      padding: 20px;
+      text-align: center;
+    }
+
+    h1 {
+      color: #fff;
+      margin: 0;
+      font-size: 28px;
+      text-transform: uppercase;
+    }
+
+    .language a {
+      color: #fff;
+      margin-left: 10px;
+      text-decoration: none;
+      font-size: 14px;
+    }
+
+    .user-buttons {
+      margin-top: 10px;
+    }
+
+    .signup-button,
+    .login-button {
+      display: inline-block;
+      padding: 5px 10px;
+      background-color: #333;
+      color: #fff;
+      text-decoration: none;
+      border-radius: 5px;
+      transition: background-color 0.3s ease-in-out;
+      margin-left: 10px;
+      font-size: 14px;
+    }
+
+    .signup-button:hover,
+    .login-button:hover {
+      background-color: #555;
+    }
+
+    /* Filter Styles */
+    .filter {
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 20px;
+      text-transform: uppercase;
+    }
+
+    .filter h2 {
+      color: #0a0a0a;
+      margin: 0;
+      text-align: center;
+      font-size: 24px;
+      text-transform: uppercase;
+    }
+
+    .filter-group {
+      margin-bottom: 10px;
+      text-transform: uppercase;
+    }
+
+    .filter-group h3 {
+      margin: 0;
+      text-transform: uppercase;
+      font-size: 18px;
+    }
+
+    .filter-group ul {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      text-transform: uppercase;
+    }
+
+    .filter-group li {
+      margin: 5px 0;
+      text-transform: uppercase;
+    }
+
+    .filter-group button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      color: #333;
+      font-weight: bold;
+      text-transform: uppercase;
+      font-size: 14px;
+    }
+
+    /* Product Catalogue Styles */
+    .product-catalogue {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .product-item {
+      flex: 0 0 200px;
+      text-align: center;
+      margin: 20px;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+      transition: box-shadow 0.3s ease-in-out;
+    }
+
+    .product-item:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
   
   .product-item img {
     width: 200px;
