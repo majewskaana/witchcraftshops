@@ -91,7 +91,7 @@
   <div class="container">
     <div class="row">
       <div class="col-md-4">
-        <div class="section">
+        <div id="office-map-section">
           <h3>OFFICE MAP</h3>
           <img src="images/map.png" alt="Click Me" onclick="redirectToLink('https://www.google.com/maps/place/Aleksandra+Čaka+iela+100,+Latgales+priekšpilsēta,+Rīga,+LV-1011/@56.9571881,24.1400531,17z/data=!3m1!4b1!4m6!3m5!1s0x46eece343a2aef39:0x23a3f6aea0fc666a!8m2!3d56.9571881!4d24.1400531!16s%2Fg%2F11mtmlbf4c?entry=ttu')">
           <script>
@@ -108,18 +108,17 @@
         </div>
       </div>
       <div class="col-md-4">
-        <div class="section">
+        <div id="donate-section">
           <a href="https://www.donationalerts.com" class="donate-button">Donate</a>
           <img src="images/donate.png" alt="Logo">
         </div>
       </div>
       <div class="col-md-4">
-        <div class="section">
+        <div id="card-section">
           <div class="card-image">
             <p>YOUR CARD OF THE DAY!</p>
             <img src="images/card.png" alt="Card">
           </div>
-          
         </div>
       </div>
     </div>
