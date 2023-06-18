@@ -35,19 +35,27 @@ body {
     margin-top: 10px;
   }
   
-  .user-buttons div {
+
+  
+  .signup-button,
+  .login-button,
+  .donate-button {
     display: inline-block;
-    border: 1px solid #ccc;
-    border-radius: 5px;
     padding: 5px 10px;
+    background-color: #333;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease-in-out;
     margin-left: 10px;
   }
   
-  .signup-button,
-  .login-button {
-    text-decoration: none;
-    color: #333;
+  .signup-button:hover,
+  .login-button:hover,
+  .donate-button:hover {
+    background-color: #555;
   }
+  
   
   /* Filter Styles */
   .filter {
@@ -195,31 +203,14 @@ body {
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s ease-in-out;
-    
+    margin-left: 10px; /* Adjust the value as needed */
   }
   
   .donate-button:hover {
     background-color: #555;
   }
   
-  .basic-info img {
-    width: 700px;
-    height: 300px;
-    margin-top: 10px;
-  }
-  
-  .donate-container img {
-    width: 80px;
-    height: 60px;
-    margin-top: 10px;
-    padding-left: 20px;
-  }
-  
-  .col-md-4 img {
-    width: 80px;
-    height: 70px;
-    margin-top: 10px;
-  }
+
   
   .card-image img {
     margin-top: 20px;
@@ -239,14 +230,22 @@ body {
     width: 80px;
     height: 60px;
     margin-top: 10px;
-    padding: 5px;
+
   }
   
-  #card-section img {
-    width: 200px;
-    height: 300px;
-    margin-top: 20px;
-    text-align: right;
-    padding: 15px;
+  .card-image {
+    text-align: center;
+  }
+  
+  .card-image p {
+    margin: 10px 0;
+    font-size: 18px;
+  }
+  
+  .card-image img {
+    width: 80%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
   }
   
