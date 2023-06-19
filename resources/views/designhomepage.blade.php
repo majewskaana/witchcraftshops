@@ -13,7 +13,7 @@
   </style>
 </head>
 <body>
-  <header>
+<header>
     <h1>WITCHCRAFT SUPPLEMENTS</h1>
     <div class="language">
       <a href="#" class="active">LV</a> | <a href="#">ENG</a>
@@ -21,6 +21,7 @@
     <div class="user-buttons">
     <div>
       <button onclick="redirectToRegistration()">Sign Up</button>
+ 
 
 <script>
   function redirectToRegistration() {
