@@ -19,3 +19,12 @@ Route::resource('/stone', StoneController::class);
 Route::resource('/cards', CardsController::class);
 
 Route::resource('/spices', SpicesController::class);
+
+Route::get('auth', function (){
+    return view('login');
+    }
+    );
+
+Route::get('registration', function (){
+    return view('register');
+    });
