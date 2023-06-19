@@ -20,7 +20,7 @@
     </div>
     <div class="user-buttons">
     <div>
-      <button onclick="redirectToRegistration()">Sign Up</button>
+      <button><a href="{{action([App\Http\Controllers\registrationcontroller::class, 'index'])}}">Sign Up</a></button>
 
 <script>
   function redirectToRegistration() {
