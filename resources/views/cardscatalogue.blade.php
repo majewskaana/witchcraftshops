@@ -12,7 +12,7 @@
 <section class="filter">
 <h2>Filter</h2>
   <div class="filter-group">
-      <button type="button" name="filter" value="stones" ><li>
+      <li><button type="button" name="filter" value="stones" >
         <a href="{{action([App\Http\Controllers\StoneController::class, 'index'])}}"> Stones</a></li></button>
     <h3><li><button type="button" name="filter" value="spices"><a href="{{action([App\Http\Controllers\SpicesController::class, 'index'])}}">Spices</a></button></li></h3>
     <h3><li><button type="button" name="filter" value="cards"><a href="{{action([App\Http\Controllers\CardsController::class, 'index'])}}">Cards</button></li></a></h3>
@@ -25,7 +25,8 @@
         <ul>
             @foreach ($cards as $card)
                 <li> 
-                    {{ $card->nosaukums }} - {{ $card->cena }}
+                    <p>{{ $card->nosaukums }}</p>
+                        <p>{{ $card->cena }}</p>
                 </li>
             @endforeach
         </ul>
