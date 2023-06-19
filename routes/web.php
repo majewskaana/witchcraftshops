@@ -18,7 +18,6 @@ Route::resource('/spices', SpicesController::class);
 Route::get('/', function () {
     return view('designhomepage');
 });
-
 Route::get('/auth', function () {
     return view('login');
 });
