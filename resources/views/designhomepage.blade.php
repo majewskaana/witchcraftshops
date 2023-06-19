@@ -2,6 +2,7 @@
 <html>
 <head>
   <title>Online Shop</title>
+  
   <link rel="stylesheet" href="styles.css">
   <style>
     /* Additional CSS */
