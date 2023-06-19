@@ -18,13 +18,17 @@ Route::resource('/stone', StoneController::class);
 
 Route::resource('/cards', CardsController::class);
 
-Route::resource('/spices', SpicesController::class);
-
-Route::get('auth', function (){
-    return view('login');
+Route::get('/', function () {
+    return view('designhomepage');
+});
+use Illuminate\Support\Facades\App;
+ 
+Route::get('/greeting/{locale}', function (string $locale) {
+    if (! in_array($locale, ['en', 'lv'])) {
+        abort(400);
     }
-    );
-
-Route::get('registration', function (){
-    return view('register');
-    });
+ 
+    App::setLocale($locale);
+ 
+    // ...
+});
