@@ -9,12 +9,13 @@
 </head>
 <body>
 <section class="filter">
-<h2>Filter</h2>
+<h2>Choose category</h2>
   <div class="filter-group">
       <li><button type="button" name="filter" value="stones" >
       <a href="{{action([App\Http\Controllers\StoneController::class, 'index'])}}"> Stones</a></li></button>
     <h3><li><button type="button" name="filter" value="spices"><a href="{{action([App\Http\Controllers\SpicesController::class, 'index'])}}">Spices</a></button></li></h3>
     <h3><li><button type="button" name="filter" value="cards"><a href="{{action([App\Http\Controllers\CardsController::class, 'index'])}}">Cards</button></li></a></h3>
+    <h3><li><button type="button" name="filter" value="products"><a href="{{action([App\Http\Controllers\AllProductsController::class, 'index'])}}">All products</a></button></li></h3>
 </section>
     <h1>Spices catalogue</h1>
     @if ($spices === null || count($spices) === 0)
