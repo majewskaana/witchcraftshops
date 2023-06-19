@@ -97,13 +97,13 @@ h2 {
 }
 
 /* Product Catalogue Styles */
-.product-catalogue {
+li {
   display: inline-block;
   vertical-align: top;
   text-align: center;
 }
 
-.product-item {
+li {
   display: inline-block;
   text-align: center;
   margin: 20px;
@@ -116,7 +116,7 @@ h2 {
   
 }
 
-.product-item:hover {
+li {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
