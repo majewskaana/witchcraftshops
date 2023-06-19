@@ -20,22 +20,9 @@
     </div>
     <div class="user-buttons">
     <div>
-      <button><a href="{{action([App\Http\Controllers\registrationcontroller::class, 'index'])}}">Sign Up</a></button>
+      <button>Sign Up</button>
+      <button>Sign Up</button>
 
-<script>
-  function redirectToRegistration() {
-    window.location.href = "register.blade.php";
-  }
-</script>
-    </div>
-    <div>
-      <button onclick="redirectToRegistration()">Log in</button>
-
-<script>
-  function redirectToRegistration() {
-    window.location.href = "login.blade.php";
-  }
-</script>
     </div>
 </div>
   </header>
@@ -53,42 +40,49 @@
   
   <section class="product-catalogue">
     <h2>PRODUCT CATALOGUE</h2>
-    <div class="product-item">
-      <img src="product1.jpg" alt="Product 1">
-      <h3>Product 1</h3>
-      <p>Description of Product 1</p>
-      <span class="price">$19.99</span>
-      <a href="#" class="buy-button">Buy Now</a>
-    </div>
-    <div class="product-item">
-      <img src="product2.jpg" alt="Product 2">
-      <h3>Product 2</h3>
-      <p>Description of Product 2</p>
-      <span class="price">$24.99</span>
-      <a href="#" class="buy-button">Buy Now</a>
-    </div>
-    <div class="product-item">
-      <img src="product2.jpg" alt="Product 2">
-      <h3>Product 2</h3>
-      <p>Description of Product 2</p>
-      <span class="price">$24.99</span>
-      <a href="#" class="buy-button">Buy Now</a>
-    </div>
-    <div class="product-item">
-      <img src="product2.jpg" alt="Product 2">
-      <h3>Product 2</h3>
-      <p>Description of Product 2</p>
-      <span class="price">$24.99</span>
-      <a href="#" class="buy-button">Buy Now</a>
-    </div>
-    <div class="product-item">
-      <img src="product2.jpg" alt="Product 2">
-      <h3>Product 2</h3>
-      <p>Description of Product 2</p>
-      <span class="price">$24.99</span>
-      <a href="#" class="buy-button">Buy Now</a>
-    </div>
-    <!-- More product items -->
+
+    <h2>Stones</h2>
+
+    @if ($stones === null || count($stones) === 0)
+        <p class='error'>There are no records in the database!</p>
+    @else
+        <ul>
+            @foreach ($stones as $stone)
+                <li> 
+                    <p>{{ $stone->nosaukums }}</p>
+                    <p>{{ $stone->cena }}</p>
+                </li>
+            @endforeach
+        </ul>
+    @endif
+    <h2>Cards</h2>
+@if ($cards === null || count($cards) === 0)
+        <p class='error'>There are no records in the database!</p>
+    @else
+        <ul>
+            @foreach ($cards as $card)
+                <li> 
+                    <p>{{ $card->nosaukums }}</p>
+                        <p>{{ $card->cena }}</p>
+                </li>
+            @endforeach
+        </ul>
+    @endif
+    <h2>Spices</h2>
+    @if ($spices === null || count($spices) === 0)
+        <p class='error'>There are no records in the database!</p>
+    @else
+        <ul>
+            @foreach ($spices as $spice)
+                <li> 
+                    <p>{{ $spice->nosaukums }}</p>
+                    <p>{{ $spice->cena }}</p>
+                </li>
+            @endforeach
+        </ul>
+    @endif
+
+
   </section>
   <footer>
   <div class="container">

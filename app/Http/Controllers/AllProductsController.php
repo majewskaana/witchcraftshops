@@ -3,12 +3,20 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\kartis;
+use App\Models\garsviela;
+use App\Models\akmens;
 
 class AllProductsController extends Controller
 {
     public function index()
     {
-        return view('designhomepage');
+        $cards = kartis::all();
+        $spices = garsviela::all();
+        $stones = akmens::all();
+        
+
+        return view('designhomepage', compact('stones','cards','spices'));
     }
     public function categories()
     {
