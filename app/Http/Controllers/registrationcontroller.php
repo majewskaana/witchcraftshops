@@ -1,3 +1,6 @@
+<?php
+
+namespace App\Http\Controllers;
 protected function create(array $data)
 {
     return User::create([
@@ -9,4 +12,3 @@ protected function create(array $data)
         'address' => $data['address'],
     ]);
 }
-
