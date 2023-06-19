@@ -22,4 +22,3 @@ Route::resource('/spices', SpicesController::class);
 Route::get('/', function () {
     return view('designhomepage');
 });
-hhhhhhhhh
