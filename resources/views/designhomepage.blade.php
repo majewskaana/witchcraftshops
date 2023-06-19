@@ -19,20 +19,8 @@
       <a href="#" class="active">LV</a> | <a href="#">ENG</a>
     </div>
     <div class="user-buttons">
-    <div>
-      <button onclick="redirectToRegistration()">Sign Up</button>
- 
-
-<script>
-  function redirectToRegistration() {
-    window.location.href = "register.blade.php";
-  }
-</script>
-    </div>
-    <div>
-      <button onclick="redirectToRegistration()">Log in</button>
-
-    </div>
+      <button>Sign Up</button>
+      <button>Log in</button>
 </div>
   </header>
   
