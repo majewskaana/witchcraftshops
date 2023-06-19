@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\kartis;
 
 class CardsController extends Controller
 {
@@ -11,7 +12,8 @@ class CardsController extends Controller
      */
     public function index()
     {
-        //
+        $cards = kartis::all();
+    return view('cardscatalogue', compact('cards'));
     }
 
     /**

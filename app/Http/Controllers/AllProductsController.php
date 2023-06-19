@@ -3,19 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\garsviela;
 
-class SpicesController extends Controller
+class AllProductsController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     */
     public function index()
     {
-        $spices = garsviela::all();
-    return view('spicescatalogue', compact('spices'));
+        return view('designhomepage');
     }
-
+    public function categories()
+    {
+        return view('greetingandcategorychoosing');
+    }
     /**
      * Show the form for creating a new resource.
      */

@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
  <meta charset="UTF-8">
- <title>Countries</title>
+ <title>Categories</title>
 </head>
 <body>
  <h1>Welcome to our catalogue!</h1>
