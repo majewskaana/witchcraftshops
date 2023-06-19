@@ -16,7 +16,7 @@ return new class extends Migration
             $table->string('nosaukums');
             $table->string('efekts');
             $table->integer('skaits');
-            $table->integer('cena');
+            $table->double('cena');
             $table->foreignId('smarza_id')->constrained()->cascadeOnDelete();
             $table->foreignId('kompanija_id')->constrained()->cascadeOnDelete();
             $table->timestamps();
