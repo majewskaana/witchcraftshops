@@ -23,12 +23,3 @@ Route::get('/', function () {
     return view('designhomepage');
 });
 
-Route::get('/auth', function () {
-    return view('login');
-});
-
-
-Route::get('/register', function () {
-    return view('register');
-});
-
