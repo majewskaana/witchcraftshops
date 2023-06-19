@@ -20,8 +20,16 @@
     </div>
     <div class="user-buttons">
     <div>
-      <button>Sign Up</button>
-      <button>Sign Up</button>
+      <button onclick="redirectToRegistration()">Sign Up</button>
+
+<script>
+  function redirectToRegistration() {
+    window.location.href = "register.blade.php";
+  }
+</script>
+    </div>
+    <div>
+      <button onclick="redirectToRegistration()">Log in</button>
 
     </div>
 </div>
