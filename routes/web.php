@@ -9,10 +9,6 @@ use App\Http\Controllers\SpicesController;
 
 Route::resource('/', AllProductsController::class);
 
-Route::get('categories', function (){
-return view('greetingandcategorychoosing');
-}
-);
 
 Route::resource('/stone', StoneController::class);
 
