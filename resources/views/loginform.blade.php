@@ -8,15 +8,9 @@
   <title>Online Shop</title>
 </head>
 <body>
-<form method="POST" action={{
-action([App\Http\Controllers\RegistrationController::class, 'store']) }}>
- @csrf
-    <h2>Register</h2>
-        <div class="form-group">
-            <label for="name">Name:</label>
-            <input type="text" class="form-control" id="name" name="name">
-        </div>
-
+    <h2>Log In</h2>
+    <form method="POST" action={{
+action([App\Http\Controllers\SessionsController::class, 'store']) }}>
         <div class="form-group">
             <label for="email">Email:</label>
             <input type="email" class="form-control" id="email" name="email">
@@ -28,10 +22,10 @@ action([App\Http\Controllers\RegistrationController::class, 'store']) }}>
         </div>
 
         <div class="form-group">
-            <button  type="submit" value="Add">Submit</button>
+            <button style="cursor:pointer" type="submit" class="btn btn-primary">Login</button>
         </div>
-    
-</form>
+      
+    </form>
 </body>
 </html> 
  
