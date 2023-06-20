@@ -10,7 +10,7 @@ use App\Http\Controllers\RegistrationController;
 
 
 Route::resource('/', AllProductsController::class);
-
+Route::get('/', [AllProductsController::class, 'index']);
 
 Route::resource('/stone', StoneController::class);
 
