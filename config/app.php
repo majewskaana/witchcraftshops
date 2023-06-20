@@ -110,7 +110,6 @@ return [
     */
 
     'faker_locale' => 'en_US',
-
     /*
     |--------------------------------------------------------------------------
     | Encryption Key
@@ -154,10 +153,21 @@ return [
     | this array to grant expanded functionality to your applications.
     |
     */
-    'providers' => [
-        // Other service providers
-        Illuminate\Foundation\Providers\DiscoverServiceProvider::class,
-    ],
+
+    'providers' => ServiceProvider::defaultProviders()->merge([
+        /*
+         * Package Service Providers...
+         */
+
+        /*
+         * Application Service Providers...
+         */
+        App\Providers\AppServiceProvider::class,
+        App\Providers\AuthServiceProvider::class,
+        // App\Providers\BroadcastServiceProvider::class,
+        App\Providers\EventServiceProvider::class,
+        App\Providers\RouteServiceProvider::class,
+    ])->toArray(),
 
     /*
     |--------------------------------------------------------------------------
@@ -175,4 +185,3 @@ return [
     ])->toArray(),
 
 ];
-
