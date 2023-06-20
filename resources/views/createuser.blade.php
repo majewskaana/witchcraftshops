@@ -33,7 +33,7 @@ action([App\Http\Controllers\RegistrationController::class, 'store']) }}>
         <div class="form-group">
             <button  type="submit" value="Add">Submit</button>
         </div>
-    
+    <?php alert("aa");
 </form>
 </body>
 </html> 
