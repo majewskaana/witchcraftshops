@@ -1,3 +1,9 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Online Shop</title>
+</head>
+<body>
 @extends('layouts.master')
 
 @section('content')
@@ -27,5 +33,6 @@
     </form>
 
 @endsection 
- 
+</body>
+</html> 
  

@@ -17,16 +17,16 @@ Route::resource('/stone', StoneController::class);
 Route::resource('/cards', CardsController::class);
 Route::resource('/spices', SpicesController::class);
 
-Route::get('/', function () {
-    return view('designhomepage');
-});
+
 Route::get('/auth', function () {
     return view('login');
 });
 
-Route::get('/register', function () {
-    return view('register');
-});
+Route::resource('/register', RegistrationController::class);
+
+/*Route::get('/register', function () {
+    return view('registration.create');
+});*/
 
 /*
 Route::get('dashboard', [CustomAuthController::class, 'dashboard']); 
@@ -36,8 +36,8 @@ Route::get('registration', [CustomAuthController::class, 'registration'])->name(
 Route::post('custom-registration', [CustomAuthController::class, 'customRegistration'])->name('register.custom'); 
 Route::get('signout', [CustomAuthController::class, 'signOut'])->name('signout');
 */
-Route::get('/register', 'RegistrationController@create');
-Route::post('register', 'RegistrationController@store');
+
+//Route::post('register', 'RegistrationController@store');
 
 Route::get('/login', 'SessionsController@create');
 Route::post('/login', 'SessionsController@store');
