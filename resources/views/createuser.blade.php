@@ -8,7 +8,9 @@
   <title>Online Shop</title>
 </head>
 <body>
-
+<form method="POST" action={{
+action([App\Http\Controllers\RegistrationControllerController::class, 'store']) }}>
+ @csrf
     <h2>Register</h2>
     <form method="POST" action="/register">
         <div class="form-group">
@@ -30,7 +32,7 @@
             <button style="cursor:pointer" type="submit" class="btn btn-primary">Submit</button>
         </div>
     </form>
-
+</form>
 </body>
 </html> 
  
