@@ -18,11 +18,11 @@ action([App\Http\Controllers\CardsController::class, 'store']) }}>
  <label for='nosaukums'>Card effect</label>
  <input type="text" name="nosaukums" id="nosaukums">
  <label for='cena'>Price</label>
- <input type="int" name="cena" id="cena">
+ <input type="currency" name="cena" id="cena">
  <label for='cena'>Quantity</label>
- <input type="int" name="skaits" id="skaits">
+ <input type="number"  name="skaits" id="skaits">
  <label for='kompanija'>Company</label>
- <input type="int" name="kompanija" id="kompanija">
+ <input type="number" name="kompanija" id="kompanija">
  <button type="submit" value="Add">Save</button>
  </form>
 </body>
