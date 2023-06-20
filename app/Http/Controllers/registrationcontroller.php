@@ -1,14 +1,16 @@
 <?php
 
 namespace App\Http\Controllers;
-protected function create(array $data)
+
+use Illuminate\Http\Request;
+
+class RegistrationController extends Controller
 {
-    return User::create([
-        'name' => $data['name'],
-        'email' => $data['email'],
-        'password' => Hash::make($data['password']),
-        // Add additional fields here
-        'phone' => $data['phone'],
-        'address' => $data['address'],
-    ]);
-}
+    public function create()
+    {
+        return view('registration.create');
+    }
+} 
+ 
+ 
+ 
