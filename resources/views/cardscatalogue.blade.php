@@ -59,6 +59,8 @@
  </form>
                 </li>
             @endforeach
+
+            
             <li><a href="{{ action([App\Http\Controllers\CardsController::class,
 'create'])}}">Add new cards</a></li>
         </ul>
