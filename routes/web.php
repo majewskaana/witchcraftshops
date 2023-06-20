@@ -9,7 +9,7 @@ use App\Http\Controllers\RegistrationController;
 use App\Http\Controllers\CustomAuthController;
 
 Route::resource('/', AllProductsController::class);
-
+Route::get('/', [AllProductsController::class, 'index']);
 
 Route::resource('/stone', StoneController::class);
 

@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\users;
-  use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Hash;
 
 
 class RegistrationController extends Controller
@@ -31,29 +31,24 @@ class RegistrationController extends Controller
 
     
      public function store(Request $request)
-     {
+    {
         
-         // Validate the form data
-         $validatedData = $request->validate([
-             'name' => 'required|string|max:255',
-             'email' => 'required|string|email|max:255|unique:users',
-             'password' => 'required|string|min:8|confirmed',
-         ]);
-     
-         // Create a new user
-         $user = new users();
-         $user->name =  $validatedData['name'];
-         $user->emails = $validatedData['email'];
-         $user->passwor = Hash::make($validatedData['password']); 
-         $user->save();
-     
-         // Perform any additional actions, such as sending a confirmation email
-     
-         // Redirect the user to a success page
-         $action = action ([AllProductsController::class, 'index']);
-         return redirect($action);
-         
-     }
+        $validatedData = $request->validate([
+            'name' => 'required|string|max:255',
+            'email' => 'required|string|email|max:255|unique:users',
+            'password' => 'required|string|min:8|confirmed',
+        ]);
+
+ 
+        $user = new User();
+        $user->name = $validatedData['name'];
+        $user->email = $validatedData['email'];
+        $user->password = Hash::make($validatedData['password']);
+        $user->save();
+
+
+        return redirect('/');
+    }
      
 
     /**
