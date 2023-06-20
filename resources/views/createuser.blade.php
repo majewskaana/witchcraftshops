@@ -9,7 +9,7 @@
 </head>
 <body>
 <form method="POST" action={{
-action([App\Http\Controllers\RegistrationControllerController::class, 'store']) }}>
+action([App\Http\Controllers\RegistrationController::class, 'store']) }}>
  @csrf
     <h2>Register</h2>
     <form method="POST" action="/register">
