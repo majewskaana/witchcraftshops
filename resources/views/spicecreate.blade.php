@@ -26,20 +26,20 @@ action([App\Http\Controllers\SpicesController::class, 'store']) }}>
  <label for='smarza'>Smell</label>
  <input type="int" name="smarza" id="smarza">
  <button type="submit" value="Add">Save</button>
+ </form>
+
 
  @if ($smells === null || count($smells) === 0)
-        <p class='error'>There are no records in the database!</p>
-    @else
-        <ul>
-            @foreach ($smells as $smell)
-                <li> 
-                    <p> {{$smell->id}} - {{ $smell->apraksts }}</p>
-                </li>
-            @endforeach
- </ul>
- <a href="{{ action([App\Http\Controllers\SmarzaController::class, 'create'])}}">Add new smell</a>
-
-    @endif
- </form>
+    <p class='error'>There are no records in the database!</p>
+@else
+    <ul>
+        @foreach ($smells as $smell)
+            <li> 
+                <p> {{$smell->id}} - {{ $smell->apraksts }}</p>
+            </li>
+        @endforeach
+    <a href="{{ action([App\Http\Controllers\SmarzaController::class, 'create']) }}">Add new smell</a> 
+    </ul>
+@endif
 </body>
 </html>

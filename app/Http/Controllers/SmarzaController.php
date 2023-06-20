@@ -5,14 +5,14 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\smarza;
 
-class SpicesController extends Controller
+class SmarzaController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-
+        return view('smellcreate');
     }
 
     /**
@@ -20,7 +20,8 @@ class SpicesController extends Controller
      */
     public function create()
     {
-        return view('smellcreate');
+        
+        
     }
 
     /**
@@ -65,7 +66,6 @@ class SpicesController extends Controller
      */
     public function destroy(string $id)
     {
-        smarza::findOrfail($id)->delete();
-        return redirect('spicecreate/');
+
     }
 }
