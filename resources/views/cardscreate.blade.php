@@ -9,9 +9,12 @@
 </head>
 <body>
  <h1>New card</h1>
- <form method="POST" action={{
-action([App\Http\Controllers\CardsController::class, 'store']) }}>
- @csrf
+ <form method="POST" action="{{ action(\App\Http\Controllers\CardsController::class, 'store') }}">
+  @csrf
+  <button type="submit">Submit</button>
+</form>
+
+ 
 
  <label for='nosaukums'>Card name</label>
  <input type="text" name="efekts" id="efekts">
