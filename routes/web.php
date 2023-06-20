@@ -22,8 +22,9 @@ Route::get('/auth', function () {
 
 Route::resource('/register', RegistrationController::class);
 Route::resource('/login', CustomAuthController::class);
-
-
+Route::post('/stone/{id}/edit', [StoneController::class, 'edit'])->name('stones.edit');
+Route::post('/cards/{id}/edit', [CardsControllerController::class, 'edit'])->name('cards.edit');
+Route::post('/cards/{id}/edit', [SpicesController::class, 'edit'])->name('spices.edit');
 
 /*Route::get('/login', 'SessionsController@create');
 Route::post('/login', 'SessionsController@store');

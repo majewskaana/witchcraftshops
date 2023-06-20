@@ -51,6 +51,12 @@
                       @method('DELETE')
                       <button type="submit" value="delete">Delete</button>
  </form>
+ <form method="POST" action={{action([App\Http\Controllers\StoneController::class, 'edit'], $stone->id) }}>
+                      @csrf 
+                      @method('POST')
+                      <button type="submit" value="delete">Edit</button>
+ </form>
+
 
                 </li>
             @endforeach

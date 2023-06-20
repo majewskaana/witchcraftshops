@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\garsviela;
 use Illuminate\Http\Request;
 use App\Models\kartis;
 
@@ -55,7 +56,8 @@ class CardsController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $cards = kartis::findOrFail($id);
+        return view('cardsupdate', compact('cards'));
     }
 
     /**
@@ -63,7 +65,11 @@ class CardsController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $cards = kartis::findOrFail($id);
+        $cards->nosaukums = $request->nosaukums;
+        $cards->save();
+        $action = action([CardsController::class, 'index']);
+        return redirect($action);
     }
 
     /**

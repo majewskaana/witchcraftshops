@@ -51,7 +51,14 @@
                       @csrf 
                       @method('DELETE')
                       <button type="submit" value="delete">Delete</button>
-                 </form></li>
+                 </form>
+                 <form method="POST" action={{action([App\Http\Controllers\SpicesController::class, 'edit'], $spice->id) }}>
+                      @csrf 
+                      @method('POST')
+                      <button type="submit" value="delete">Edit</button>
+ </form>
+                
+                </li>
             @endforeach
             <li><a href="{{ action([App\Http\Controllers\SpicesController::class,
 'create'])}}">Add new spice</a></li>

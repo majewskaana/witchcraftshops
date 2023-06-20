@@ -58,7 +58,8 @@ class SpicesController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $spices = garsviela::findOrFail($id);
+        return view('spiceupdate', compact('spices'));
     }
 
     /**
@@ -66,7 +67,11 @@ class SpicesController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $spices = garsviela::findOrFail($id);
+        $spices->nosaukums = $request->nosaukums;
+        $spices->save();
+        $action = action([SpicesController::class, 'index']);
+        return redirect($action);
     }
 
     /**

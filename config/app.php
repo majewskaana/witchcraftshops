@@ -186,11 +186,4 @@ return [
     ])->toArray(),
 
 ];
-// config/app.php
-use Illuminate\Support\Facades\App;
- 
-$locale = App::currentLocale();
- 
-if (App::isLocale('en')) {
-    // ...
-}
+

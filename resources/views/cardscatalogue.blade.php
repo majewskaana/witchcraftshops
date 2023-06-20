@@ -52,6 +52,11 @@
                       @method('DELETE')
                       <button type="submit" value="delete">Delete</button>
  </form>
+ <form method="POST" action={{action([App\Http\Controllers\CardsController::class, 'edit'], $card->id) }}>
+                      @csrf 
+                      @method('POST')
+                      <button type="submit" value="delete">Edit</button>
+ </form>
                 </li>
             @endforeach
             <li><a href="{{ action([App\Http\Controllers\CardsController::class,
