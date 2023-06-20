@@ -19,19 +19,21 @@
       <a href="#" class="active">LV</a> | <a href="#">ENG</a>
     </div>
     <div class="user-buttons">
-      <button>Sign Up</button>
-      <button>Log in</button>
+    <button name="roles" value="registration"><a href="{{action([App\Http\Controllers\RegistrationController::class, 'index'])}}">Sign Up</a></button>
+    <button name="roles" value="registration"><a href="{{action([App\Http\Controllers\CustomAuthController::class, 'index'])}}">Log In</a></button>
+  
 </div>
   </header>
   
   <section class="filter">
-  <h2>Filter</h2>
+<h2>Choose category</h2>
   <div class="filter-group">
       <button type="button" name="filter" value="stones" ><li>
         <a href="{{action([App\Http\Controllers\StoneController::class, 'index'])}}"> Stones</a></li></button>
     <h3><li><button type="button" name="filter" value="spices"><a href="{{action([App\Http\Controllers\SpicesController::class, 'index'])}}">Spices</a></button></li></h3>
     <h3><li><button type="button" name="filter" value="cards"><a href="{{action([App\Http\Controllers\CardsController::class, 'index'])}}">Cards</button></li></a></h3>
     <h3><li><button type="button" name="filter" value="products"><a href="{{action([App\Http\Controllers\AllProductsController::class, 'index'])}}">All products</a></button></li></h3>
+  </div>
 </section>
 
 

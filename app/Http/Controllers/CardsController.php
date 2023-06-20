@@ -21,7 +21,8 @@ class CardsController extends Controller
      */
     public function create()
     {
-        //
+        $cards = kartis::all();
+        return view('cardscreate', compact('cards'));
     }
 
     /**
@@ -29,7 +30,16 @@ class CardsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $card = new kartis();
+        $card->nosaukums = $request->nosaukums;
+        $card->efekts = $request->efekts;
+        $card->cena = $request->cena;
+        $card->skaits = $request->skaits;
+        $card->kompanija_id = $request->kompanija;
+        $card->save();
+        #to perform a redirect back, we need country code from ID
+        $action = action([CardsController::class, 'index']);
+        return redirect($action);
     }
 
     /**
@@ -61,6 +71,7 @@ class CardsController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        kartis::findOrfail($id)->delete();
+        return redirect('cards/');
     }
 }
