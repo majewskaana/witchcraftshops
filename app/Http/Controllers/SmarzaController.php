@@ -3,7 +3,6 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\garsviela;
 use App\Models\smarza;
 
 class SpicesController extends Controller
@@ -13,8 +12,7 @@ class SpicesController extends Controller
      */
     public function index()
     {
-        $spices = garsviela::all();
-        return view('spicescatalogue', compact('spices'));
+
     }
 
     /**
@@ -22,8 +20,7 @@ class SpicesController extends Controller
      */
     public function create()
     {
-        $smells = smarza::all();
-        return view('spicecreate', compact('smells'));
+        return view('smellcreate');
     }
 
     /**
@@ -32,10 +29,10 @@ class SpicesController extends Controller
     public function store(Request $request)
     {
         $smell = new smarza();
-        $smell->apraksts = $request->apraksts;
+        $smell->apraksts = $request->nosaukums;
         $smell->save();
         #to perform a redirect back, we need country code from ID
-        $action = action([SpicesController::class, 'spicecreate']);
+        $action = action([SpicesController::class, 'index']);
         return redirect($action);
     }
 
@@ -68,7 +65,7 @@ class SpicesController extends Controller
      */
     public function destroy(string $id)
     {
-        garsviela::findOrfail($id)->delete();
-        return redirect('spices/');
+        smarza::findOrfail($id)->delete();
+        return redirect('spicecreate/');
     }
 }

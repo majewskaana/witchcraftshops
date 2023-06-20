@@ -46,8 +46,14 @@
                 <li> 
                     <p>{{ $spice->nosaukums }}</p>
                     <p>{{ $spice->cena }}</p>
+                    <form method="POST" action={{action([App\Http\Controllers\SpicesController::class, 'destroy'], $spice->id) }}>
+                      @csrf 
+                      @method('DELETE')
+                      <button type="submit" value="delete">Delete</button>
                 </li>
             @endforeach
+            <li><a href="{{ action([App\Http\Controllers\SpicesController::class,
+'create'])}}">Add new spice</a></li>
         </ul>
     @endif
 
