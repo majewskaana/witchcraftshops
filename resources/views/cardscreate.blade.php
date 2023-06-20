@@ -13,7 +13,6 @@
   @csrf
   <button type="submit">Submit</button>
 </form>
-
  
 
  <label for='nosaukums'>Card name</label>
