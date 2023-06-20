@@ -21,7 +21,7 @@ action([App\Http\Controllers\StoneController::class, 'store']) }}>
  <input type="text" name="nosaukums" id="nosaukums">
  <label for='cena'>Price</label>
  <input type="int" name="cena" id="cena">
- <label for='cena'>Skaits</label>
+ <label for='cena'>Quantity</label>
  <input type="int" name="skaits" id="skaits">
  <label for='kompanija'>Company</label>
  <input type="int" name="kompanija" id="kompanija">

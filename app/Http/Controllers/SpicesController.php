@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\garsviela;
+use App\Models\smarza;
 
 class SpicesController extends Controller
 {
@@ -13,7 +14,7 @@ class SpicesController extends Controller
     public function index()
     {
         $spices = garsviela::all();
-    return view('spicescatalogue', compact('spices'));
+        return view('spicescatalogue', compact('spices'));
     }
 
     /**
@@ -21,7 +22,9 @@ class SpicesController extends Controller
      */
     public function create()
     {
-        //
+        $spices = garsviela::all();
+        $smells = smarza::all();
+        return view('spicecreate', compact('spices', 'smells'));
     }
 
     /**
@@ -29,7 +32,17 @@ class SpicesController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $spice = new garsviela();
+        $spice->nosaukums = $request->nosaukums;
+        $spice->efekts = $request->efekts;
+        $spice->cena = $request->cena;
+        $spice->skaits = $request->skaits;
+        $spice->kompanija_id = $request->kompanija;
+        $spice->smarza_id = $request->smarza;
+        $spice->save();
+        #to perform a redirect back, we need country code from ID
+        $action = action([SpicesController::class, 'index']);
+        return redirect($action);
     }
 
     /**
@@ -45,7 +58,8 @@ class SpicesController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $spices = garsviela::findOrFail($id);
+        return view('spiceupdate', compact('spices'));
     }
 
     /**
@@ -53,7 +67,11 @@ class SpicesController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $spices = garsviela::findOrFail($id);
+        $spices->nosaukums = $request->nosaukums;
+        $spices->save();
+        $action = action([SpicesController::class, 'index']);
+        return redirect($action);
     }
 
     /**
@@ -61,6 +79,7 @@ class SpicesController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        garsviela::findOrfail($id)->delete();
+        return redirect('spices/');
     }
 }

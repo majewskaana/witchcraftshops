@@ -2,19 +2,17 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\garsviela;
 use Illuminate\Http\Request;
-use App\Models\kartis;
+use App\Models\smarza;
 
-class CardsController extends Controller
+class SmarzaController extends Controller
 {
     /**
      * Display a listing of the resource.
      */
     public function index()
     {
-        $cards = kartis::all();
-    return view('cardscatalogue', compact('cards'));
+        return view('smellcreate');
     }
 
     /**
@@ -22,8 +20,8 @@ class CardsController extends Controller
      */
     public function create()
     {
-        $cards = kartis::all();
-        return view('cardscreate', compact('cards'));
+        
+        return view('smellcreate');
     }
 
     /**
@@ -31,15 +29,11 @@ class CardsController extends Controller
      */
     public function store(Request $request)
     {
-        $card = new kartis();
-        $card->nosaukums = $request->nosaukums;
-        $card->efekts = $request->efekts;
-        $card->cena = $request->cena;
-        $card->skaits = $request->skaits;
-        $card->kompanija_id = $request->kompanija;
-        $card->save();
+        $smell = new smarza();
+        $smell->apraksts = $request->apraksts;
+        $smell->save();
         #to perform a redirect back, we need country code from ID
-        $action = action([CardsController::class, 'index']);
+        $action = action([SpicesController::class, 'spicecreate']);
         return redirect($action);
     }
 
@@ -56,8 +50,7 @@ class CardsController extends Controller
      */
     public function edit(string $id)
     {
-        $cards = kartis::findOrFail($id);
-        return view('cardsupdate', compact('cards'));
+        //
     }
 
     /**
@@ -65,11 +58,7 @@ class CardsController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        $cards = kartis::findOrFail($id);
-        $cards->nosaukums = $request->nosaukums;
-        $cards->save();
-        $action = action([CardsController::class, 'index']);
-        return redirect($action);
+        //
     }
 
     /**
@@ -77,7 +66,6 @@ class CardsController extends Controller
      */
     public function destroy(string $id)
     {
-        kartis::findOrfail($id)->delete();
-        return redirect('cards/');
+
     }
 }

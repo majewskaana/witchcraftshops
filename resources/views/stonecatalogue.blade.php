@@ -21,8 +21,8 @@
     </div>
     <div class="user-buttons">
     <div>
-      <button>Sign Up</button>
-      <button>Sign Up</button>
+      <button name="roles" value="registration"><a href="{{action([App\Http\Controllers\RegistrationController::class, 'index'])}}">Sign Up</a></button>
+      <button name="roles" value="registration"><a href="{{action([App\Http\Controllers\CustomAuthController::class, 'index'])}}">Log In</a></button>
 
     </div>
 </div>
@@ -51,6 +51,12 @@
                       @method('DELETE')
                       <button type="submit" value="delete">Delete</button>
  </form>
+ <form method="POST" action={{action([App\Http\Controllers\StoneController::class, 'edit'], $stone->id) }}>
+                      @csrf 
+                      @method('POST')
+                      <button type="submit" value="delete">Edit</button>
+ </form>
+
 
                 </li>
             @endforeach

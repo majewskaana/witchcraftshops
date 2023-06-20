@@ -57,7 +57,8 @@ class StoneController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        $stones = akmens::findOrFail($id);
+        return view('stoneupdate', compact('stones'));
     }
 
     /**
@@ -65,7 +66,12 @@ class StoneController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        $stones = akmens::findOrFail($id);
+        $stones->nosaukums = $request->nosaukums;
+        $stones->save();
+        $action = action([StoneController::class, 'index']);
+        return redirect($action);
+
     }
 
     /**
