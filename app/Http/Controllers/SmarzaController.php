@@ -21,7 +21,7 @@ class SmarzaController extends Controller
     public function create()
     {
         
-        
+        return view('smellcreate');
     }
 
     /**
@@ -30,10 +30,10 @@ class SmarzaController extends Controller
     public function store(Request $request)
     {
         $smell = new smarza();
-        $smell->apraksts = $request->nosaukums;
+        $smell->apraksts = $request->apraksts;
         $smell->save();
         #to perform a redirect back, we need country code from ID
-        $action = action([SpicesController::class, 'index']);
+        $action = action([SpicesController::class, 'spicecreate']);
         return redirect($action);
     }
 

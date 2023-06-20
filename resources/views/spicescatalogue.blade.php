@@ -50,13 +50,13 @@
                       @csrf 
                       @method('DELETE')
                       <button type="submit" value="delete">Delete</button>
-                </li>
+                 </form></li>
             @endforeach
             <li><a href="{{ action([App\Http\Controllers\SpicesController::class,
 'create'])}}">Add new spice</a></li>
         </ul>
     @endif
-
+           
     <footer>
   <div class="container">
     <div class="row">

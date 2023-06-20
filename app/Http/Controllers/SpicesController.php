@@ -22,8 +22,9 @@ class SpicesController extends Controller
      */
     public function create()
     {
+        $spices = garsviela::all();
         $smells = smarza::all();
-        return view('spicecreate', compact('smells'));
+        return view('spicecreate', compact('spices', 'smells'));
     }
 
     /**
@@ -31,11 +32,16 @@ class SpicesController extends Controller
      */
     public function store(Request $request)
     {
-        $smell = new smarza();
-        $smell->apraksts = $request->apraksts;
-        $smell->save();
+        $spice = new garsviela();
+        $spice->nosaukums = $request->nosaukums;
+        $spice->efekts = $request->efekts;
+        $spice->cena = $request->cena;
+        $spice->skaits = $request->skaits;
+        $spice->kompanija_id = $request->kompanija;
+        $spice->smarza_id = $request->smarza;
+        $spice->save();
         #to perform a redirect back, we need country code from ID
-        $action = action([SpicesController::class, 'spicecreate']);
+        $action = action([SpicesController::class, 'index']);
         return redirect($action);
     }
 

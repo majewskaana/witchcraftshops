@@ -38,7 +38,7 @@ action([App\Http\Controllers\SpicesController::class, 'store']) }}>
                 <p> {{$smell->id}} - {{ $smell->apraksts }}</p>
             </li>
         @endforeach
-    <a href="{{ action([App\Http\Controllers\SmarzaController::class, 'create']) }}">Add new smell</a> 
+     
     </ul>
 @endif
 </body>
