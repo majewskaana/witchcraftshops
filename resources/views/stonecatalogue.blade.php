@@ -21,8 +21,8 @@
     </div>
     <div class="user-buttons">
     <div>
-      <button>Sign Up</button>
-      <button>Log in</button>
+      <button name="roles" value="registration"><a href="{{action([App\Http\Controllers\RegistrationController::class, 'index'])}}">Sign Up</a></button>
+      <button name="roles" value="registration"><a href="{{action([App\Http\Controllers\CustomAuthController::class, 'index'])}}">Log In</a></button>
 
     </div>
 </div>
