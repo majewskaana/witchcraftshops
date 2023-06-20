@@ -21,7 +21,9 @@ class StoneController extends Controller
      */
     public function create()
     {
-        //
+        $stones = akmens::all();
+        return view('stonecreate', compact('stones'));
+
     }
 
     /**
@@ -29,7 +31,17 @@ class StoneController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $stone = new akmens();
+        $stone->nosaukums = $request->nosaukums;
+        $stone->efekts = $request->efekts;
+        $stone->cena = $request->cena;
+        $stone->skaits = $request->skaits;
+        $stone->zodiaks()->associate($request->zodiaks);
+        $stone->kompanija()->associate($request->kompanija);
+        $stone->save();
+        #to perform a redirect back, we need country code from ID
+        $action = action([StoneController::class, 'index']);
+        return redirect($action);
     }
 
     /**
@@ -61,6 +73,7 @@ class StoneController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        akmens::findOrfail($id)->delete();
+        return redirect('stone/');
     }
 }

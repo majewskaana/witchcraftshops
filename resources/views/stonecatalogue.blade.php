@@ -46,8 +46,16 @@
                 <li> 
                     <p>{{ $stone->nosaukums }}</p>
                     <p>{{ $stone->cena }}</p>
+                    <form method="POST" action={{action([App\Http\Controllers\StoneController::class, 'destroy'], $stone->id) }}>
+                      @csrf 
+                      @method('DELETE')
+                      <button type="submit" value="delete">Delete</button>
+ </form>
+
                 </li>
             @endforeach
+            <li><a href="{{ action([App\Http\Controllers\StoneController::class,
+'create'])}}">Add new stone</a></li>
         </ul>
     @endif
 
