@@ -23,7 +23,7 @@ Route::get('/auth', function () {
 });
 
 Route::resource('/register', RegistrationController::class);
-
+Route::resource('/login', SessionsController::class);
 /*Route::get('/register', function () {
     return view('registration.create');
 });*/

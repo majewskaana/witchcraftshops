@@ -1,16 +1,16 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+<meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <meta http-equiv="X-UA-Compatible" content="ie=edge">
+ <link rel="stylesheet" href="styles.css">
   <title>Online Shop</title>
 </head>
 <body>
-@extends('layouts.master')
-
-@section('content')
 
     <h2>Register</h2>
     <form method="POST" action="/register">
-        {{ csrf_field() }}
         <div class="form-group">
             <label for="name">Name:</label>
             <input type="text" class="form-control" id="name" name="name">
@@ -29,10 +29,8 @@
         <div class="form-group">
             <button style="cursor:pointer" type="submit" class="btn btn-primary">Submit</button>
         </div>
-        @include('partials.formerrors')
     </form>
 
-@endsection 
 </body>
 </html> 
  
