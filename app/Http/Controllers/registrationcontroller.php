@@ -21,7 +21,8 @@ class RegistrationController extends Controller
      */
     public function create()
     {
-        
+
+        return view('createuser');
     }
 
     /**
@@ -31,6 +32,7 @@ class RegistrationController extends Controller
     
      public function store(Request $request)
      {
+        
          // Validate the form data
          $validatedData = $request->validate([
              'name' => 'required|string|max:255',
@@ -48,7 +50,9 @@ class RegistrationController extends Controller
          // Perform any additional actions, such as sending a confirmation email
      
          // Redirect the user to a success page
-         return redirect()->route('web');
+         $action = action ([AllProductsController::class, 'index']);
+         return redirect($action);
+         
      }
      
 

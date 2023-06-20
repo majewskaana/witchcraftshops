@@ -29,7 +29,7 @@ action([App\Http\Controllers\RegistrationController::class, 'store']) }}>
         </div>
 
         <div class="form-group">
-            <button style="cursor:pointer" type="submit" class="btn btn-primary">Submit</button>
+            <button style="cursor:pointer" type="submit" value="Add">Submit</button>
         </div>
     </form>
 </form>
