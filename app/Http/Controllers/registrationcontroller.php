@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Models\User;
+use App\Models\users;
   use Illuminate\Support\Facades\Hash;
 
 
@@ -41,11 +41,11 @@ class RegistrationController extends Controller
          ]);
      
          // Create a new user
-         $user = User::create([
-             'name' => $validatedData['name'],
-             'email' => $validatedData['email'],
-             'password' => Hash::make($validatedData['password']),
-         ]);
+         $user = new users();
+         $user->name =  $validatedData['name'];
+         $user->emails = $validatedData['email'];
+         $user->passwor = Hash::make($validatedData['password']); 
+         $user->save();
      
          // Perform any additional actions, such as sending a confirmation email
      

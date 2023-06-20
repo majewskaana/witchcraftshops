@@ -5,7 +5,7 @@ use App\Http\Controllers\AllProductsController;
 use App\Http\Controllers\StoneController;
 use App\Http\Controllers\CardsController;
 use App\Http\Controllers\SpicesController;
-use App\Http\Controllers\CustomAuthController;
+
 use App\Http\Controllers\RegistrationController;
 
 
