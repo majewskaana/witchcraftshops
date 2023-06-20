@@ -22,7 +22,7 @@
     <div class="user-buttons">
     <div>
       <button>Sign Up</button>
-      <button>Sign Up</button>
+      <button>Log in</button>
 
     </div>
 </div>
